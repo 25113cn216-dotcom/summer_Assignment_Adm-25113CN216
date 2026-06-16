@@ -1,0 +1,94 @@
+Q5. Sum of digits of a number
+#include <stdio.h>
+
+int main() {
+    int num, digit, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        num = -num;
+    }
+
+    while (num > 0) {
+        digit = num % 10;
+        sum += digit;
+        num = num / 10;
+    }
+
+    printf("Sum of digits = %d\n", sum);
+
+    return 0;
+}
+Q6. Reverse a number
+#include <stdio.h>
+
+int main() {
+    int num, digit, reverse = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        digit = num % 10;
+        reverse = reverse * 10 + digit;
+        num = num / 10;
+    }
+
+    printf("Reverse = %d\n", reverse);
+
+    return 0;
+}
+Q7. Product of digits
+#include <stdio.h>
+
+int main() {
+    int num, digit, product = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        num = -num;
+    }
+
+    if (num == 0) {
+        product = 0;
+    } else {
+        while (num > 0) {
+            digit = num % 10;
+            product *= digit;
+            num = num / 10;
+        }
+    }
+
+    printf("Product of digits = %d\n", product);
+
+    return 0;
+}
+Q8. Check whether a number is palindrome
+#include <stdio.h>
+
+int main() {
+    int num, original, digit, reverse = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    original = num;
+
+    while (num != 0) {
+        digit = num % 10;
+        reverse = reverse * 10 + digit;
+        num = num / 10;
+    }
+
+    if (original == reverse) {
+        printf("Palindrome number\n");
+    } else {
+        printf("Not a palindrome number\n");
+    }
+
+    return 0;
+}
