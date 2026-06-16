@@ -1,0 +1,96 @@
+//sum of first N natural numbers//
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+
+    printf("Enter N: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        sum += i;
+    }
+
+    printf("Sum = %d\n", sum);
+
+    return 0;
+}
+
+//Multiplication table of a given number//
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
+
+    return 0;
+}
+
+//Factorial of a number//
+#include <stdio.h>
+int main() {
+    int n;
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    printf("Factorial = %lld\n", fact);
+
+    return 0;
+}
+
+//Factorial of a number//
+#include <stdio.h>
+
+int main() {
+    int n;
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    printf("Factorial = %lld\n", fact);
+
+    return 0;
+
+    //Count digits in a number//
+    #include <stdio.h>
+
+    int main() {
+    int num, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num == 0) {
+        count = 1;
+    } else {
+        if (num < 0) {
+            num = -num;
+        }
+
+        while (num > 0) {
+            count++;
+            num = num / 10;
+        }
+    }
+
+    printf("Number of digits = %d\n", count);
+
+    return 0;
+}
